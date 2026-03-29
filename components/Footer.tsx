@@ -2,7 +2,7 @@ const contactLinks = [
   { label: 'GitHub', href: 'https://github.com/reiidj' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/djemf/' },
   { label: 'Email', href: 'mailto:reidjemfrivera@gmail.com' },
-  { label: 'Resume', href: '/resume.pdf' },
+  { label: 'Resume', href: '/CV_RIVERA.pdf' },
 ]
 
 export function Footer() {

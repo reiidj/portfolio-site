@@ -49,33 +49,66 @@ export function About() {
             >
               Engineer, not just developer.
             </h2>
-            <div className="space-y-5 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
-              <p>
-                I'm a graduating computer science student with hands-on
-                experience building full-stack applications from the ground
-                up — including production deployments, schema migrations, and
-                multi-team collaboration using Git.
-              </p>
-              <p>
-                My background spans both sides of the stack. I care as much
-                about a well-indexed database query as a well-structured React
-                component. I write code that's meant to be read and maintained,
-                not just executed.
-              </p>
-              <p>
-                I'm actively looking for my first full-time engineering role
-                where I can contribute to a real product, work alongside
-                experienced engineers, and keep improving.
-              </p>
+
+            {/* Photo + bio side by side */}
+            <div className="flex gap-8 items-start mb-0">
+
+              {/* Profile photo with corner borders */}
+              <div className="relative shrink-0 w-28 h-28 sm:w-32 sm:h-32">
+
+                {/* The photo */}
+                <img
+                  src="/Personal_Image.jpg"
+                  alt="A Photo of Rei Djemf Rivera"
+                  className="w-full h-full object-cover object-top grayscale"
+                />
+
+                {/* Top-left corner */}
+                <span className="absolute -top-1.5 -left-1.5 w-4 h-4
+                  border-t-2 border-l-2 border-stone-400 dark:border-stone-500" />
+
+                {/* Top-right corner */}
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4
+                  border-t-2 border-r-2 border-stone-400 dark:border-stone-500" />
+
+                {/* Bottom-left corner */}
+                <span className="absolute -bottom-1.5 -left-1.5 w-4 h-4
+                  border-b-2 border-l-2 border-stone-400 dark:border-stone-500" />
+
+                {/* Bottom-right corner */}
+                <span className="absolute -bottom-1.5 -right-1.5 w-4 h-4
+                  border-b-2 border-r-2 border-stone-400 dark:border-stone-500" />
+              </div>
+
+              {/* Bio text */}
+              <div className="space-y-5 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
+                <p>
+                  I'm a graduating computer science student with hands-on
+                  experience building full-stack applications from the ground
+                  up — including production deployments, schema migrations, and
+                  multi-team collaboration using Git.
+                </p>
+                <p>
+                  My background spans both sides of the stack. I care as much
+                  about a well-indexed database query as a well-structured React
+                  component. I write code that's meant to be read and maintained,
+                  not just executed.
+                </p>
+                <p>
+                  I'm actively looking for my first full-time engineering role
+                  where I can contribute to a real product, work alongside
+                  experienced engineers, and keep improving.
+                </p>
+              </div>
             </div>
 
             {/* Quick facts */}
             <div className="mt-10 pt-10 border-t border-stone-200 dark:border-stone-800 grid grid-cols-2 gap-6">
               {[
-                { label: 'Location', value: 'Manila, PH · Remote' },
+                { label: 'Location', value: 'Manila, PH · Remote OK' },
                 { label: 'Education', value: 'B.S. Computer Science' },
                 { label: 'Stack', value: 'TypeScript · Next.js · PostgreSQL' },
-                { label: 'Status', value: 'Graduating 2026' },
+                { label: 'Status', value: 'Graduating 2025' },
               ].map(({ label, value }) => (
                 <div key={label}>
                   <dt
