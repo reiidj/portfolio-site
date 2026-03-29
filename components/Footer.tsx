@@ -39,7 +39,7 @@ export function Footer() {
               opportunities. Say hello.
             </p>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:reidjemfrivera@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm tracking-wide hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors rounded-sm"
             >
               Send a message
