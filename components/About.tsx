@@ -108,12 +108,12 @@ export function About() {
                 { label: 'Location', value: 'Manila, PH · Remote OK' },
                 { label: 'Education', value: 'B.S. Computer Science' },
                 { label: 'Stack', value: 'TypeScript · Next.js · PostgreSQL' },
-                { label: 'Status', value: 'Graduating 2025' },
+                { label: 'Status', value: 'Graduating 2026' },
               ].map(({ label, value }) => (
                 <div key={label}>
                   <dt
                     className="text-xs tracking-widest uppercase text-stone-400 dark:text-stone-500 mb-1"
-                    style={{ fontFamily: 'var(--font-mono)' }}
+                    style={{ fontFamily: 'var(--font- no)' }}
                   >
                     {label}
                   </dt>

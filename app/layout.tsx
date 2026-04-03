@@ -3,9 +3,9 @@ import './globals.css'
 import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
-  title: 'Rei Djemf Rivera — Full-Stack Developer',
+  title: 'Rei Djemf Rivera | Portfolio',
   description:
-    'Full-stack web developer specializing in scalable web applications, clean APIs, and thoughtful user interfaces.',
+    'Computer Science student specializing in backend and full-stack development.'
 }
 
 export default function RootLayout({
@@ -15,9 +15,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 antialiased transition-colors duration-200">
+      <body className="relative bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 antialiased transition-colors duration-200">
+        {/* Background layer */}
+        <div className="fixed inset-0 -z-10 bg-pattern opacity-50" />
+
+        {/* Navbar and Main content */}
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-16">
+          {children}
+        </main>
       </body>
     </html>
   )
