@@ -31,11 +31,11 @@ The application is built using a **modern full-stack architecture**, emphasizing
 
 To view the live version of this portfolio and explore the projects in detail, visit the link below:
 
-**Official Portfolio**: [https://github.com/reiidj/portfolio](https://github.com/reiidj/portfolio)
+**Official Portfolio**: [https://djemf.vercel.app](https://djemf.vercel.app)
 
 ---
 
 ### Contact
 
 **Rei Djemf M. Rivera** - [@reiidj](https://github.com/reiidj)  
-**Project Link**: [https://github.com/reiidj/portfolio](https://github.com/reiidj/portfolio)
+**Project Link**: [https://djemf.vercel.app](https://djemf.vercel.app)
