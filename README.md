@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full-Stack Portfolio
 
-## Getting Started
+This repository contains the official source code for my professional portfolio. The site is designed to showcase my engineering background, technical specialties, and project deep-dives with a focus on a **minimalist, content-first aesthetic**.
 
-First, run the development server:
+The application is built using a **modern full-stack architecture**, emphasizing high performance, responsive design, and dynamic routing for project-specific documentation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Dynamic Project Routing**: Implements **Next.js 15 dynamic routes** to automatically generate unique, SEO-friendly pages for every project in the data registry.
+* **Adaptive Media Showcase**: A custom-engineered media player that **automatically adjusts** its container and borders based on the aspect ratio of the content, supporting both vertical mobile demos and horizontal desktop applications.
+* **Hybrid Layout**: A responsive grid system designed to provide **optimal reading experiences** across mobile, tablet, and desktop viewports.
+* **Theme Support**: Integrated dark and light mode system using **Tailwind CSS**, ensuring accessibility and user preference persistence.
+* **Centralized Data Management**: Architecture follows the **Single Source of Truth (SSOT)** principle, where project details are managed in a standalone data module to ensure consistency across the entire site.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### Tech Stack and Tools
 
-To learn more about Next.js, take a look at the following resources:
+* **Framework**: Next.js 15 (App Router)
+* **Styling**: Tailwind CSS
+* **Language**: TypeScript
+* **Icons**: Lucide React / Custom SVG Components
+* **Deployment**: Vercel
+* **Database**: Supabase (Integration for future dynamic features)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Live Demonstration
 
-## Deploy on Vercel
+To view the live version of this portfolio and explore the projects in detail, visit the link below:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Official Portfolio**: [https://github.com/reiidj/portfolio](https://github.com/reiidj/portfolio)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### Contact
+
+**Rei Djemf M. Rivera** - [@reiidj](https://github.com/reiidj)  
+**Project Link**: [https://github.com/reiidj/portfolio](https://github.com/reiidj/portfolio)
