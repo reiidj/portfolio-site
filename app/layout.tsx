@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
+import { WalkingDuck } from '@/components/WalkingDuck'
 
 export const metadata: Metadata = {
   title: 'Rei Djemf Rivera | Portfolio',
@@ -16,10 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="relative bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 antialiased transition-colors duration-200">
-        {/* Background layer */}
-        <div className="fixed inset-0 -z-10 bg-pattern opacity-50" />
+        
+        {/* The Mallard Pattern Layer */}
+        <div 
+          className="fixed inset-0 -z-10 mallard-pattern opacity-[0.075] dark:opacity-[0.07] pointer-events-none" 
+          aria-hidden="true"
+        />
+        
+        <WalkingDuck /> {/* Our new friend */}
 
-        {/* Navbar and Main content */}
         <Navbar />
         <main className="pt-16">
           {children}
@@ -27,4 +33,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-}
+} 

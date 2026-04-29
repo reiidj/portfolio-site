@@ -25,108 +25,71 @@ export function About() {
   return (
     <section
       id="about"
-      className="border-t border-stone-200 dark:border-stone-800 py-24 md:py-32"
-      aria-labelledby="about-heading"
+      className="relative py-24 md:py-32 border-t border-stone-200 dark:border-stone-800"
     >
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section label */}
-        <p
-          className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-16"
-          style={{ fontFamily: 'var(--font-mono)' }}
-        >
+      {/* 1. The Gradient Mask: 
+          This creates a soft white 'glow' behind the text. 
+          It's invisible to the eye but makes the ducks fade out 
+          where the content is densest. */}
+      <div className="absolute inset-0 bg-gradient-to-b from-stone-50/40 via-white/80 to-stone-50/40 dark:from-stone-950/40 dark:via-stone-900/80 dark:to-stone-950/40 -z-0 pointer-events-none" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <p className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-16 font-mono">
           About
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Bio column */}
-          <div>
-            {/* Top Row: Photo + Headline */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-6 sm:gap-8 mb-8">
-              
-              {/* Profile photo with corner borders */}
+          {/* Bio Column */}
+          <div className="space-y-8">
+            <div className="flex flex-col sm:flex-row items-center gap-8">
               <div className="relative shrink-0 w-32 h-32 sm:w-36 sm:h-36">
-                {/* The photo */}
                 <img
                   src="/Personal_Image.jpg"
-                  alt="A Photo of Rei Djemf Rivera"
-                  className="w-full h-full object-cover object-top grayscale rounded-sm"
+                  className="w-full h-full object-cover grayscale rounded-sm"
+                  alt="Rei Rivera"
                 />
-
-                {/* Top-left corner */}
-                <span className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-stone-400 dark:border-stone-500" />
-                {/* Top-right corner */}
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 border-t-2 border-r-2 border-stone-400 dark:border-stone-500" />
-                {/* Bottom-left corner */}
-                <span className="absolute -bottom-1.5 -left-1.5 w-4 h-4 border-b-2 border-l-2 border-stone-400 dark:border-stone-500" />
-                {/* Bottom-right corner */}
-                <span className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-stone-400 dark:border-stone-500" />
+                {/* Keep your signature corner borders */}
+                <span className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-stone-400" />
+                <span className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-stone-400" />
               </div>
-
-              {/* Headline vertically aligned with the photo */}
-              <div className="flex flex-col justify-center text-center sm:text-left">
-                <h2
-                  id="about-heading"
-                  className="text-4xl md:text-5xl text-stone-900 dark:text-stone-100 leading-[1.1]"
-                  style={{ fontFamily: 'var(--font-serif)' }}
-                >
-                  Engineer, <br className="hidden sm:block" />
-                  <span className="text-stone-500 dark:text-stone-400">not just developer.</span>
-                </h2>
-              </div>
+              
+              <h2 className="text-4xl md:text-5xl text-stone-900 dark:text-stone-100 leading-tight font-serif">
+                Engineer, <br />
+                <span className="text-stone-400">not just developer.</span>
+              </h2>
             </div>
 
-            {/* Bio text flowing underneath */}
-            <div className="space-y-5 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
+            <div className="space-y-6 text-stone-600 dark:text-stone-400 font-light leading-relaxed text-lg">
               <p>
-                I'm a graduating Computer Science student at PUP Manila with
-                hands-on experience building full-stack applications from the
-                ground up. My primary focus is on backend architecture — designing
-                relational databases, engineering RESTful APIs, and managing server
-                deployments, with experience in multi-team collaboration using Git.
+                I'm a graduating Computer Science student at PUP Manila. My focus 
+                is on <span className="text-stone-900 dark:text-stone-100 font-medium">backend architecture</span> — 
+                designing systems that are meant to be scaled and maintained.
               </p>
               <p>
-                My background spans both sides of the stack. While I am capable on the frontend 
-                with Next.js and Flutter, I thrive when working under the hood with Python and Java 
-                to solve complex logic and data problems. I specialize in bridging the gap between 
-                advanced AI models and user-facing applications, such as deploying live 
-                PyTorch inference pipelines and managing real-time data synchronization. 
-                I write code that's meant to be scaled, read, and maintained.
-              </p>
-              <p>
-                I'm actively looking for my first full-time engineering role
-                where I can contribute to a real product, work alongside
-                experienced engineers, and keep growing.
+                I specialize in bridging the gap between advanced AI models and 
+                user-facing apps, deploying live PyTorch pipelines and managing 
+                real-time data sync.
               </p>
             </div>
           </div>
 
-          {/* Specialties column */}
+          {/* Specialties Column */}
           <div>
-            <h3
-              className="text-sm text-stone-400 dark:text-stone-500 mb-8 tracking-widest uppercase"
-              style={{ fontFamily: 'var(--font-mono)' }}
-            >
+            <h3 className="text-xs text-stone-400 mb-8 tracking-widest uppercase font-mono">
               Specialties
             </h3>
-            <ul className="space-y-0" role="list">
+            <ul className="divide-y divide-stone-200/60 dark:divide-stone-800/60">
               {specialties.map(({ label, description }, i) => (
-                <li
-                  key={label}
-                  className="group py-6 border-t border-stone-200 dark:border-stone-800 last:border-b last:border-stone-200 last:dark:border-stone-800"
-                >
-                  <div className="flex items-start gap-4">
-                    <span
-                      className="text-xs text-stone-300 dark:text-stone-700 mt-1 w-5 shrink-0"
-                      style={{ fontFamily: 'var(--font-mono)' }}
-                      aria-hidden="true"
-                    >
+                <li key={label} className="py-6 first:pt-0">
+                  <div className="flex gap-4">
+                    <span className="text-[10px] text-stone-300 font-mono mt-1">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-stone-900 dark:text-stone-100 mb-1.5">
+                      <h4 className="text-stone-900 dark:text-stone-100 font-medium mb-1">
                         {label}
-                      </p>
-                      <p className="text-sm text-stone-500 dark:text-stone-400 font-light leading-relaxed">
+                      </h4>
+                      <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed font-light">
                         {description}
                       </p>
                     </div>

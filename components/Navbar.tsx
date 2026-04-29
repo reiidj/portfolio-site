@@ -16,18 +16,24 @@ export function Navbar() {
         className="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between"
         aria-label="Primary navigation"
       >
-        {/* Logo / Name (Now Bigger and Bolder) */}
+        {/* Logo / Name with Mallard */}
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300 transition-colors"
+          className="flex items-center gap-3 group text-lg font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-stone-600 dark:hover:text-stone-300 transition-colors"
         >
-          Rei Djemf Rivera
+          <img 
+            src="/mallard.png" 
+            alt="" 
+            className="w-6 h-6 image-pixelated transition-transform group-hover:-rotate-12 group-hover:scale-110" 
+            aria-hidden="true"
+          />
+          <span>Rei Djemf Rivera</span>
         </Link>
 
         {/* Right Side Group (Links + Status + Toggle) */}
         <div className="flex items-center gap-8">
           
-          {/* Links (Moved to the right) */}
+          {/* Links */}
           <ul className="hidden md:flex items-center gap-6" role="list">
             {navLinks.map(({ label, href }) => (
               <li key={label}>
@@ -54,7 +60,6 @@ export function Navbar() {
             </div>
             <ThemeToggle />
           </div>
-
         </div>
       </nav>
     </header>

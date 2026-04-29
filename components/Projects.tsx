@@ -22,7 +22,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="border-t border-stone-200 dark:border-stone-800 py-24 md:py-32">
+    <section id="projects" className="py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Label */}
@@ -34,16 +34,25 @@ export function Projects() {
           Things I've built.
         </h2>
 
-        <ul className="space-y-0">
+        {/* Added a subtle background to the list container. 
+            'bg-stone-50/50' allows some ducks to peek through slightly 
+            while 'backdrop-blur' keeps the text crisp.
+        */}
+        <ul className="space-y-4"> 
           {projects.map((project) => (
-            <li key={project.name} className="group py-8 border-t border-stone-200 dark:border-stone-800 last:border-b last:border-stone-200 last:dark:border-stone-800">
+            <li 
+              key={project.name} 
+              className="group p-8 rounded-xl border border-stone-200 dark:border-stone-800 
+                         bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm
+                         hover:bg-white dark:hover:bg-stone-900 
+                         transition-all duration-300 hover:shadow-xl hover:shadow-stone-200/50 dark:hover:shadow-none"
+            >
               
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 
                 {/* Left Side: Info & Links */}
                 <div className="flex flex-col gap-3 max-w-xl">
                   
-                  {/* Title & Github Icon Row */}
                   <div className="flex items-center gap-3">
                     <a 
                       href={project.githubUrl} 
@@ -54,26 +63,23 @@ export function Projects() {
                     >
                       <GithubIcon className="w-5 h-5" />
                     </a>
-                    <h3 className="text-xl font-medium text-stone-900 dark:text-stone-100 transition-colors">
+                    <h3 className="text-xl font-medium text-stone-900 dark:text-stone-100">
                       {project.name}
                     </h3>
                   </div>
 
-                  {/* Classification */}
                   <p className="text-xs uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold" style={{ fontFamily: 'var(--font-mono)' }}>
                     {project.type}
                   </p>
 
-                  {/* Description */}
-                  <p className="text-sm text-stone-500 dark:text-stone-400 font-light leading-relaxed">
+                  <p className="text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Read More Button (Internal Link) */}
                   <div className="pt-2">
                     <Link 
                       href={`/projects/${project.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-stone-900 dark:text-stone-100 hover:text-stone-500 dark:hover:text-stone-400 transition-colors group/btn"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-stone-900 dark:text-stone-100 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors group/btn"
                     >
                       Read Project Details
                       <ArrowRightIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -86,7 +92,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span 
                       key={tag}
-                      className="text-xs px-3 py-1 border border-stone-200 dark:border-stone-700 text-stone-500 dark:text-stone-400 rounded-sm"
+                      className="text-[10px] px-2 py-1 bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-400 rounded-md"
                       style={{ fontFamily: 'var(--font-mono)' }}
                     >
                       {tag}
