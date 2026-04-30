@@ -10,8 +10,7 @@ const projectsData = [
     description: 'Deployed and developed a functional mobile app for cataract maturity classification using Flutter, and huggingface API.',
     tags: ['Flutter','Dart','Firebase','Android Studio','PyTorch', 'Huggingface'],
     githubUrl: 'https://github.com/reiidj/a-eye',
-    fullOverview: 'Here is where you would write a long, multi-paragraph explanation of the A-Eye project, the challenges you faced, and how the PyTorch model integrates with Flutter.',
-    // ADDED MEDIA URLS
+    fullOverview: 'A-Eye is a deep learning–driven system designed to assess anterior eye image maturity by combining a custom PyTorch model with a mobile-first Flutter interface. The core of the project is a modified MobileViT architecture enhanced with radial tokenization, allowing the model to better capture circular and region-specific patterns found in eye images, which traditional grid-based tokenization tends to miss. The pipeline processes raw eye images through preprocessing, tokenization, and feature extraction before producing a maturity score, with careful handling of data flow to ensure consistency between training and inference. One of the main challenges was aligning the theoretical model design with practical implementation, particularly in structuring the radial tokenizer and maintaining correct tensor transformations across multiple stages. Another critical issue was bridging the gap between the PyTorch backend and the Flutter frontend, requiring model optimization, export, and efficient API or on-device inference integration to ensure real-time usability. The project emphasizes both model accuracy and deployment feasibility, balancing computational cost with performance so the system remains responsive on mobile devices while still delivering meaningful predictions.',
     imageUrl: '/a-eye-poster.jpg',
     videoUrl: '/a-eye-demo.mp4',
   },
@@ -22,8 +21,7 @@ const projectsData = [
     description: 'Deployed and developed a live phishing awareness game with complete flow scene, game mechanics, backend logic, and UI design.',
     tags: ['Unity','C#'],
     githubUrl: 'https://github.com/reiidj/Phishing-Please',
-    fullOverview: 'Details about building the game mechanics, the shield system, and deploying it as an Android APK.',
-    // ADDED MEDIA URLS
+    fullOverview: '“Phishing Please” is a point-and-click educational game developed in Unity that teaches users how to identify email phishing attacks through interactive gameplay. The experience is structured across seven progressively difficult levels, each introducing more sophisticated phishing techniques such as spoofed domains, misleading links, urgent language, and subtle visual inconsistencies. Players analyze simulated emails and make decisions by clicking on elements they believe indicate a threat, reinforcing pattern recognition and critical evaluation skills. The core mechanics revolve around event-driven interactions, UI-based feedback, and a scoring system that tracks accuracy and progression, requiring careful handling of game state, input detection, and level transitions. One of the main challenges was designing levels that gradually increase in complexity without overwhelming the player, while still accurately reflecting real-world phishing scenarios. Another key aspect was implementing clear feedback loops so players understand why an action is correct or incorrect, turning mistakes into learning moments. The entire system was built and coded end-to-end, including gameplay logic, UI flow, and difficulty scaling, resulting in a functional serious game that blends cybersecurity education with engaging interaction.',
     imageUrl: '/phishing-poster.png',
     videoUrl: '/phishing-demo.mp4',
   },
