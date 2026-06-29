@@ -6,7 +6,8 @@ import { WalkingDuck } from '@/components/WalkingDuck'
 export const metadata: Metadata = {
   title: 'Rei Djemf Rivera | Portfolio',
   description:
-    'Computer Science student specializing in backend and full-stack development.'
+    'Computer Science student specializing in backend and full-stack development.',
+  keywords: ['Rei Djemf Rivera', 'Rei Rivera portfolio', 'Rei Djemf Rivera web developer', 'PUP Computer Science portfolio'],
 }
 
 export default function RootLayout({
