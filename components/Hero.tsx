@@ -29,7 +29,7 @@ export function Hero() {
 
       {/* Main Title */}
       <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 font-medium max-w-2xl mb-8">
-        Computer Science Student & Full-Stack Developer @ PUP Manila 2026
+        Computer Science Student & Software Engineer @ PUP Manila 2026
       </p>
 
       {/* Tech Stack Pills (Shows exactly what you do) */}
