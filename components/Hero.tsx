@@ -27,7 +27,7 @@ export function Hero() {
 
       {/* Main Title: Increased contrast for readability */}
       <p className="text-lg md:text-xl text-stone-700 dark:text-stone-300 font-medium max-w-2xl mb-8 leading-relaxed">
-        Computer Science Student & Software Engineer @ PUP Manila 2026
+        Full Stack Developer & Computer Science Graduate from PUP Manila
       </p>
 
       {/* Action Area: Introduced a primary 'View Projects' CTA alongside the Resume */}

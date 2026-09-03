@@ -4,9 +4,9 @@ import { Navbar } from '@/components/Navbar'
 import { WalkingDuck } from '@/components/WalkingDuck'
 
 export const metadata: Metadata = {
-  title: 'Rei Djemf Rivera | Portfolio',
+  title: 'Rei Djemf Rivera | Full Stack Developer & PUP Computer Science Graduate',
   description:
-    'Computer Science student specializing in backend and full-stack development.',
+    'Rei Djemf Rivera is a Full Stack Developer and Computer Science graduate from PUP Manila, specializing in Next.js, React, TypeScript, PostgreSQL, and modern web applications.',
   keywords: ['Rei Djemf Rivera', 'Rei Rivera portfolio', 'Rei Djemf Rivera web developer', 'PUP Computer Science portfolio'],
 }
 
