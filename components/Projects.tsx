@@ -1,17 +1,25 @@
 import Link from 'next/link'
 
-// Updated data structure to include 'type' and 'slug'
+// Updated data structure with NestGuard added first
 const projects = [
   {
-    slug: 'a-eye', // This creates the URL: /projects/a-eye
-    name: 'A-Eye: A Cataract maturity classification app',
-    type: 'Mobile App', // The new classification placeholder
-    description: 'Deployed and developed a functional mobile app for cataract maturity classification using Flutter, and huggingface API.',
-    tags: ['Flutter','Dart','Firebase','Android Studio','PyTorch', 'Huggingface'],
-    githubUrl: 'https://github.com/reiidj/a-eye', // Renamed to separate from internal routing
+    slug: 'nestguard', // Creates the URL: /projects/nestguard
+    name: 'NestGuard Pest Control Services',
+    type: 'Web Portal',
+    description: 'A full-stack enterprise web portal and pest management service platform featuring secure authentication with Cloudflare Turnstile, custom Supabase backends, analytics dashboards, and issue tracking.',
+    tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Vercel', 'Cloudflare Turnstile'],
+    githubUrl: 'https://github.com/reiidj/nestguard-pest', // Update with your actual repo if needed
   },
   {
-    slug: 'phishing-please', // This creates the URL: /projects/phishing-please
+    slug: 'a-eye', // Creates the URL: /projects/a-eye
+    name: 'A-Eye: A Cataract maturity classification app',
+    type: 'Mobile App',
+    description: 'Deployed and developed a functional mobile app for cataract maturity classification using Flutter, and huggingface API.',
+    tags: ['Flutter','Dart','Firebase','Android Studio','PyTorch', 'Huggingface'],
+    githubUrl: 'https://github.com/reiidj/a-eye',
+  },
+  {
+    slug: 'phishing-please', // Creates the URL: /projects/phishing-please
     name: 'Phishing Please',
     type: 'Game App',
     description: 'Deployed and developed a live phishing awareness game with complete flow scene, game mechanics, backend logic, and UI design.',
@@ -34,10 +42,6 @@ export function Projects() {
           Things I've built.
         </h2>
 
-        {/* Added a subtle background to the list container. 
-            'bg-stone-50/50' allows some ducks to peek through slightly 
-            while 'backdrop-blur' keeps the text crisp.
-        */}
         <ul className="space-y-4"> 
           {projects.map((project) => (
             <li 
